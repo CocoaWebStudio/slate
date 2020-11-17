@@ -1,39 +1,46 @@
-# Contributing Guide
+# Community version of Slate 🤝
 
-## This repo is no longer active. See README for details
+This is a community version of Slate which was forked from the original, and is no longer associated with or related to [Shopify.](https://www.shopify.com/)
 
-Slate is an open-source project built for the Shopify Theme community and it needs contributions from the community to be truly successful. We encourage you to join us in our mission of enhancing the Shopify theme development experience!
-
-## Scope
-
-The Slate Github repo exists for the theme development community to discuss and solve problems directly related to Slate. It **is not the place** to discuss general theme development problems, nor the place to seek help for non-Slate related problems.
-
-Shopify Theme development is a big topic and it's completely normal that you will encounter problems which might require you to reach out for help. In fact, we provide several knowledge and support platforms for theme development:
-
-* [The Shopify Help Center](https://help.shopify.com/themes)
-* [The Partners Blog](https://www.shopify.ca/partners/blog/topics/shopify-theme-development)
-* [Shopify Forum](https://ecommerce.shopify.com/forums)
-* [Shopify Experts](https://experts.shopify.com/)
-* [Shopify Support](https://help.shopify.com/questions)
+**Slate _was_** an open-source project built for the Shopify Theme community, and with contributions from the community this take-off can be very successful too!
 
 ## How to contribute
 
-If you encounter a bug, think of a useful feature, or find something confusing in the docs, please [create a new issue](https://github.com/Shopify/slate/issues/new)!
+**All Help Is Welcome!** 🥳
 
-We ❤️ pull requests. If you'd like to fix a bug, contribute to a feature or just correct a typo, please feel free to do so, as long as you follow our [Code of Conduct](https://github.com/Shopify/slate/blob/master/CODE_OF_CONDUCT.md).
+If you encounter a bug, think of a useful feature, or find something confusing in the docs, please [create a new issue](https://github.com/CocoaWebStudio/slate/issues/new)!
 
-If you're thinking of adding a big new feature, consider opening an issue first to discuss it to ensure it aligns to the direction of the project (and potentially save yourself some time!).
+We are always open to new pull requests 💖, especially since this project is powered by the community. If you do submit a PR, please make sure to follow the [Code of Conduct](https://github.com/CocoaWebStudio/slate/blob/master/CODE_OF_CONDUCT.md).
 
-This repo is a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md) consisting of multiple packages and is managed using [Lerna](https://github.com/lerna/lerna).
+If you're thinking of adding a big new feature, consider opening an issue first to discuss it to ensure it aligns to the direction of the project (_**and potentially save yourself some time!**_ 😅).
 
-## Getting Started
+### Getting Started
+
+In order to use this project along with your own Slate project, you need to install both projects into one directory.
+
+It should look like this:
+
+```
+parentDirectory/
+   yourSlateProject/
+   slate/
+```
+
+You also need to modify the dev dependencies in the `package.json` file of `./yourSlateProject` just like the following:
+
+```json
+...
+"devDependencies": {
+  "@shopify/slate-tools": "file:../slate/packages/slate-tools",
+...
+```
 
 To start working on the codebase:
 
 #### 1. Fork the repo, then clone it:
 
 ```
-git clone git@github.com:your-username/slate.git
+git clone https://github.com/CocoaWebStudio/slate.git
 ```
 
 _Note: replace "your-username" with your GitHub handle_
@@ -106,7 +113,7 @@ That's it! Now when you run any Slate Tools commands, they should be run using y
 
 If your change affects how people use the project (i.e. adding or removing functionality, changing the return value of a function, etc), please ensure [the documentation website](https://shopify.github.io/slate/docs/about) is also updated to reflect this.
 
-The documentation website lives in the [docs folder](https://github.com/Shopify/slate/tree/master/docs) on the `master` branch and is hosted using GitHub Pages on the `gh-pages` branch.
+The documentation website lives in the [docs folder](https://github.com/CocoaWebStudio/slate/tree/master/docs) on the `master` branch and is hosted using GitHub Pages on the `gh-pages` branch.
 
 To publish to `gh-pages` branch, in the `v1` docs folder run
 
@@ -114,8 +121,7 @@ To publish to `gh-pages` branch, in the `v1` docs folder run
 GIT_USER=<GITHUB_USERNAME> CURRENT_BRANCH=master USE_SSH=true yarn run publish-gh-pages
 ```
 
-
-You can read both the README files in the [v0 folder](https://github.com/Shopify/slate/tree/master/docs/v0) and the [v1 folder](https://github.com/Shopify/slate/tree/master/docs/v0) to see how to run the documentation site locally. 
+You can read both the README files in the [v0 folder](https://github.com/CocoaWebStudio/slate/tree/master/docs/v0) and the [v1 folder](https://github.com/CocoaWebStudio/slate/tree/master/docs/v1) to see how to run the documentation site locally.
 
 ## Publishing
 
